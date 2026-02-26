@@ -1,674 +1,1030 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omar Meneses | Desarrollador Web</title>
 
-  <title>Portafolio | Omar Meneses</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-  <script src="script.js"></script>
-</head>
-
-<body>
-
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light">Omar Meneses</h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://www.facebook.com/fernando.meneses99" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/fernando.meneses99/" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://wa.me/573133677048" class="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/in/omar-fernando-meneses-daza/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/fernandomeneses99" class="linkedin"><i class="bx bxl-github"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Acerca de</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portafolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Servicios</span></a></li>
-          <li><a href="#certifications" class="nav-link scrollto"><i class="bi bi-terminal-plus"></i> <span>Certificaciones</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-    </div>
-  </header><!-- Fin Header -->
-
-  <!-- ======= Hero Seccion ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="hero-container" data-aos="fade-in">
-      <h1>Omar Meneses</h1>
-      <p>Soy <span class="typed" data-typed-items="Diseñador, Desarrollador, Freelancer"></span></p>
-    </div>
-  </section><!-- Fin Hero -->
-
-  <main id="main">
-
-    <!-- ======= Acerca de Seccion ======= -->
-    <section id="about" class="about">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Perfil Profesional</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>Desarrollador Web Jr</h3>
-            <p class="fst-italic">
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Cumpleaños:</strong> <span>2 Dic 1999</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Teléfono:</strong> <span>+57 3133677048</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Ciudad:</strong> <span>Bogotá, Colombia</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Edad:</strong> <span id="edad"></span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Grado:</strong> <span>Tecnólogo</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Correo:</strong> <span>fernandomenesesda@gmail.com</span></li>
-                </ul>
-              </div>
-            </div>
-            <p>
-              Tecnólogo en Desarrollo de Software apasionado por la creación de soluciones innovadoras y eficientes. Poseo sólidos conocimientos en PHP, HTML, CSS, C#, .NET y Python, MySQL, SQLServer, Bootstrap, Power BI, Powerr APPS, Power Automate, con enfoque en SCRUM, cuento con fácil adaptabilidad al cambio y aprendizaje continuo. Busco una oportunidad para aplicar mis habilidades técnicas y profesionales para contribuir al éxito de un equipo de desarrollo.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- Fin Acerca de Seccion -->
-
-    <!-- ======= Hechos Seccion ======= -->
-    <section id="hechos" class="hechos">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Hechos</h2>
-        </div>
-
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up">
-            <div class="count-box">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Clientes Felices</strong></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="100">
-            <div class="count-box">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Proyectos</strong></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="200">
-            <div class="count-box">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Horas de Soporte</strong></p>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Equipo de Trabajo</strong></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- Fin Hechos Section -->
-
-    <!-- ======= Habilidades Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Habilidades</h2>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">HTML <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">CSS <i class="val">35%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">JavaScript <i class="val">25%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">PHP <i class="val">40%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">C# / .NET / .NET CORE / MICROSERVICIOS <i class="val">45%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">SQLServer / MySQL<i class="val">55%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- Fin habilidades Seccion -->
-
-    <!-- ======= Resumen Section ======= -->
-    <section id="resume" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Resumen</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Educación</h3>
-            <div class="resume-item">
-              <h4>Tecnólogo en Desarrollo de Software</h4>
-              <h5>2022 - 2025</h5>
-              <p><em>Servicio Nacional de Aprendizaje - SENA, Bogotá</em></p>
-            </div>
-            <div class="resume-item">
-              <h4>Bachiller Académico</h4>
-              <h5>2018 - 2019</h5>
-              <p><em>Centro de Estudios Técnicos, Antioquia</em></p>
-            </div>
-            <h3 class="resume-title">Estudios Complementarios</h3>
-            <div class="resume-item">
-              <h4>VARIABLES Y ESTRUCTURAS DE CONTROL EN PYTHON</h4>
-              <h5>2023 - 2023</h5>
-              <p><em>Servicio Nacional de Aprendizaje - SENA, Bogotá</em></p>
-            </div>
-          </div>
-        
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Experiencia Profesional</h3>
-<div class="accordion" id="accordionExperience">
-
-  <!-- Experiencia 1 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp1" aria-expanded="false" aria-controls="exp1">
-        Desarrollador Web Jr | Dolphin Telecomunations, Bogotá D.C <span class="ms-2 text-muted">Jul 2024 - Ene 2025</span>
-      </button>
-    </h2>
-    <div id="exp1" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExperience">
-      <div class="accordion-body">
-        <ul>
-          <li>Diseño y desarrollo de aplicaciones web dinámicas utilizando CMS, PHP, MySQL, HTML, CSS y JavaScript.</li>
-          <li>Uso de Bootstrap para interfaces responsivas.</li>
-          <li>Trabajo bajo metodología Scrum: sprints, reuniones diarias y entregables.</li>
-          <li>Implementación de funcionalidades, resolución de errores y soporte al producto final.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Experiencia 2 -->
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2" aria-expanded="false" aria-controls="exp2">
-        Soporte técnico Lvl II - Evertec Colombia S.A.S <span class="ms-2 text-muted">Marzo 2025 - Junio 2025</span>
-      </button>
-    </h2>
-    <div id="exp2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExperience">
-      <div class="accordion-body">
-        <ul>
-          <li>Gestión y administración de Active Directory.</li>
-          <li>Atención y resolución de incidencias TI en entornos Windows, soporte local y remoto.</li>
-          <li>Administración de bases de datos empresariales, asegurando eficiencia en la información.</li>
-          <li>Documentación y optimización de procesos TI.</li>
-          <li>Uso de herramientas de mesa de ayuda, comunicación asertiva y trabajo en equipo.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-<!-- Experiencia 3 -->
-<div class="accordion-item">
-  <h2 class="accordion-header" id="headingThree">
-    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp3" aria-expanded="false" aria-controls="exp3">
-      Analista de Soporte TI | Avalora, Bogotá D.C <span class="ms-2 text-muted">Jun 2025 - Actual</span>
-    </button>
-  </h2>
-  <div id="exp3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExperience">
-    <div class="accordion-body">
-      <ul>
-        <li>Garantizar el funcionamiento eficiente, seguro y continuo de los sistemas de información.</li>
-        <li>Atender solicitudes de soporte técnico de usuarios presenciales o remotos (Nivel 1 y 2).</li>
-        <li>Instalar, configurar y mantener equipos de cómputo, impresoras y periféricos.</li>
-        <li>Diagnosticar y solucionar problemas de hardware y software.</li>
-        <li>Gestionar cuentas de usuario y accesos a sistemas corporativos.</li>
-        <li>Realizar mantenimiento preventivo a equipos informáticos.</li>
-        <li>Documentar incidencias, soluciones y actividades realizadas.</li>
-        <li>Asistir en la implementación de proyectos tecnológicos.</li>
-        <li>Velar por la seguridad básica de red y equipos.</li>
-        <li>Coordinar con proveedores para servicios y garantías técnicas.</li>
-        <li>Gestionar inventario de equipos y licencias de software.</li>
-        <li>Asegurar el cumplimiento de políticas internas y normativas externas.</li>
-        <li>Elaborar informes periódicos sobre procesos, incidencias y estado de los servicios.</li>
-        <li>Proponer e implementar mejoras continuas en sistemas, procesos y políticas tecnológicas.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-</div>
-
-
-      </div>
-    </section><!-- Fin Resumen Seccion -->
-
-    <!-- ======= Portafolio Seccion ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Portafolio</h2>
-        </div>
-
-        <div class="row" data-aos="fade-up">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">Todo</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-web">Web</li>
-              <li data-filter=".filter-starup">StarUp</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/Krokori.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="PizzaHouse"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/dolphintele.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="https://dolphintele.com/" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-starup">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-details-1.png" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-details-3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="<b>NovaSoft S.A.S</b> es una empresa de desarrollo de software especializada en soluciones tecnológicas innovadoras para la gestión empresarial. 🚀"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <!--<div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-links">
-                <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-              </div>
-            </div>
-          </div>-->
-
-        </div>
-
-      </div>
-    </section><!-- Fin Portafolio Seccion -->
-
-    <!-- ======= Servicios Seccion ======= -->
-    <section id="services" class="services">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Servicios</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-            <div class="icon"><i class="bi bi-briefcase"></i></div>
-            <h4 class="title"><a>Creación de Landing Pages</a></h4>
-            <p class="description">Diseño, desarrollo e implementación de páginas de aterrizaje enfocadas en la conversión y llamadas a la acción (CTAs) efectivas.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon"><i class="bi bi-card-checklist"></i></div>
-            <h4 class="title"><a>Optimización para Motores de Búsqueda (SEO)</a></h4>
-            <p class="description">Implementación de prácticas básicas de SEO on-page (etiquetas meta, estructuras de encabezados, enlaces internos), optimización de imágenes y contenido para mejorar la clasificación en buscadores.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon"><i class="bi bi-bar-chart"></i></div>
-            <h4 class="title"><a>Consultoría y Capacitación Básica</a></h4>
-            <p class="description">Asesoramiento para pequeñas empresas o emprendedores sobre cómo iniciar una presencia web, capacitación para usar herramientas básicas como WordPress o sistemas de correo electrónico.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon"><i class="bi bi-binoculars"></i></div>
-            <h4 class="title"><a>Soporte Técnico</a></h4>
-            <p class="description">Resolución de problemas básicos en sitios web, configuración de dominios, hosting y correos electrónicos.</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-            <div class="icon"><i class="bi bi-brightness-high"></i></div>
-            <h4 class="title"><a>Desarrollo Frontend Básico</a></h4>
-            <p class="description">Creación de interfaces de usuario con frameworks como Bootstrap, e implementación de componentes interactivos con JavaScript</p>
-          </div>
-          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon"><i class="bi bi-calendar4-week"></i></div>
-            <h4 class="title"><a>Mantenimiento de Sitios Web</a></h4>
-            <p class="description">Actualización de contenido y corrección de errores en sitios existentes, optimización de velocidad de carga (compresión de imágenes, minificación de CSS/JS), Actualización de temas o plugins en CMS como WordPress</p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-    <!-- Fin Servicios Seccion -->
-
-    <!-- ======= Certificados Seccion ======= -->
-    <section id="certifications" class="certifications">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Certificados</h2>
-        </div>
-
-        <div class="row">
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="195122de-8e95-4096-be8b-1cc122f44991" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
-        </div>
-
-      </div>
-    </section>
-    <!-- Fin Servicios Seccion -->
-     
-    <!-- ======= Contacto Seccion ======= -->
-    <section id="contact" class="contact">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Contacto</h2>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Dirreción:</h4>
-                <p>Cra 81J # 57d - 02 Sur</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>fernandomenesesda@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Teléfono:</h4>
-                <p>+57 3133677048</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254508.39472220035!2d-74.2726233300057!3d4.648620639894961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bfd2da6cb29%3A0x239d635520a33914!2zQm9nb3TDoQ!5e0!3m2!1ses!2sco!4v1698000888733!5m2!1ses!2sco" frameborder="0" style="border:0; width: 100%; height: 290px;" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-  <form id="contact-form" role="form" class="php-email-form" novalidate>	
-    <div class="row">
-      <div class="form-group col-md-6">
-        <label for="name">Su nombre:</label>
-        <input type="text" name="user_name" class="form-control" id="name" required>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="email">Su correo:</label>
-        <input type="email" class="form-control" name="user_email" id="email" required>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="subject">Asunto:</label>
-      <input type="text" class="form-control" name="subject" id="subject" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Mensaje:</label>
-      <textarea class="form-control" name="message" rows="10" required></textarea>
-    </div>
-    <div class="my-3">
-      <div class="loading">Cargando...</div>
-      <div class="error-message"></div>
-      <div class="sent-message">Su mensaje ha sido enviado. ¡Gracias!</div>
-    </div>
-    <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
-  </form>
-</div>
-
-<!-- EmailJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    // Inicializa con tu User ID de EmailJS
-    emailjs.init("v9Gg4_hoWSHtFF_yI"); 
-  })();
-
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    // Mostrar animación de "Cargando..."
-    document.querySelector(".loading").style.display = "block";
-    document.querySelector(".error-message").style.display = "none";
-    document.querySelector(".sent-message").style.display = "none";
-
-    emailjs.sendForm("service_mp1yyv8", "template_hyen2gi", this)
-      .then(function() {
-        document.querySelector(".loading").style.display = "none";
-        document.querySelector(".sent-message").style.display = "block";
-      }, function(error) {
-        document.querySelector(".loading").style.display = "none";
-        document.querySelector(".error-message").innerHTML = "Error al enviar: " + JSON.stringify(error);
-        document.querySelector(".error-message").style.display = "block";
-      });
-  });
-document.querySelectorAll('.php-email-form').forEach(form => {
-  form.removeAttribute('action');
-  form.removeAttribute('method');
-});
-
-</script>
-
-
-        </div>
-
-      </div>
-    </section>
-  <!-- Fin Contacto Seccion -->
-
-  </main><!-- Fin #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Omar Meneses <strong><span id="year"></span></strong>
-      </div>
-    </div>
-  </footer><!-- Fin  Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
   <script>
-    var d = new Date();
-    var n = d.getFullYear();
-    document.getElementById("year").innerHTML = n;
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            mono: ['IBM Plex Mono', 'monospace'],
+            body: ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            'bg': '#070b12',
+            'surface': '#0d1420',
+            'surface2': '#111827',
+            'accent': '#38bdf8',
+            'accent2': '#0ea5e9',
+            'glow': '#38bdf8',
+            'muted': '#4b5563',
+            'subtle': '#1e293b',
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.6s ease forwards',
+            'fade-in': 'fadeIn 0.8s ease forwards',
+            'blink': 'blink 1s step-end infinite',
+            'float': 'float 6s ease-in-out infinite',
+            'scan': 'scan 3s linear infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            blink: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            scan: {
+              '0%': { transform: 'translateY(-100%)' },
+              '100%': { transform: 'translateY(100vh)' },
+            },
+          },
+        }
+      }
+    }
   </script>
 
-  <script>
-  function calcularEdad(fechaNacimiento) {
-    const hoy = new Date();
-    const nacimiento = new Date(fechaNacimiento);
-    let edad = hoy.getFullYear() - nacimiento.getFullYear();
-    const mes = hoy.getMonth() - nacimiento.getMonth();
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
-      edad--;
+    :root {
+      --accent: #38bdf8;
+      --bg: #070b12;
+      --surface: #0d1420;
     }
-    return edad;
-  }
 
-  // Fecha de nacimiento: 2 Dic 1999
-  const edad = calcularEdad("1999-12-02");
-  document.getElementById("edad").textContent = edad;
-</script>
+    html { scroll-behavior: smooth; }
 
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--bg);
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+
+    /* Nav */
+    #navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(7, 11, 18, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+    }
+
+    /* Glow effect */
+    .glow-text { text-shadow: 0 0 40px rgba(56, 189, 248, 0.5); }
+    .glow-border { box-shadow: 0 0 20px rgba(56, 189, 248, 0.15), inset 0 0 20px rgba(56, 189, 248, 0.03); }
+    .glow-accent { box-shadow: 0 0 30px rgba(56, 189, 248, 0.4); }
+
+    /* Hero grid pattern */
+    .hero-grid {
+      background-image: 
+        linear-gradient(rgba(56, 189, 248, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Typed cursor */
+    .typed::after {
+      content: '|';
+      color: var(--accent);
+      animation: blink 1s step-end infinite;
+    }
+
+    /* Skill bar */
+    .skill-fill {
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+      transition: width 1.5s ease;
+    }
+
+    /* Card hover */
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(56, 189, 248, 0.1);
+      border-color: rgba(56, 189, 248, 0.4) !important;
+    }
+
+    /* Timeline line */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    /* Mobile nav */
+    #mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(7, 11, 18, 0.98);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+    #mobile-nav.open { display: flex; }
+
+    /* Section reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Gradient orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    /* Accordion */
+    .acc-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; }
+    .acc-content.open { max-height: 600px; }
+    .acc-btn .chevron { transition: transform 0.3s ease; }
+    .acc-btn.open .chevron { transform: rotate(180deg); }
+
+    /* Portfolio filter */
+    .filter-btn.active {
+      background: var(--accent);
+      color: #070b12;
+    }
+    .portfolio-item { transition: opacity 0.4s ease, transform 0.4s ease; }
+    .portfolio-item.hidden { opacity: 0; pointer-events: none; transform: scale(0.95); }
+
+    /* Form */
+    .form-input {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 8px;
+      color: #e2e8f0;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      h1.hero-title { font-size: 3rem !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-bg text-slate-300">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="#hero" class="font-display font-bold text-white text-lg tracking-tight">
+        OM<span class="text-accent">.</span>
+      </a>
+      
+      <!-- Desktop nav -->
+      <ul class="hidden lg:flex items-center gap-8">
+        <li><a href="#hero" class="nav-link font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Inicio</a></li>
+        <li><a href="#about" class="nav-link font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Perfil</a></li>
+        <li><a href="#resume" class="nav-link font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Resumen</a></li>
+        <li><a href="#portfolio" class="nav-link font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Portafolio</a></li>
+        <li><a href="#services" class="nav-link font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Servicios</a></li>
+        <li><a href="#certifications" class="nav-link font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Certificados</a></li>
+        <li><a href="#contact" class="px-5 py-2 border border-accent text-accent font-mono text-xs tracking-widest uppercase hover:bg-accent hover:text-bg transition-all rounded">Contacto</a></li>
+      </ul>
+
+      <!-- Hamburger -->
+      <button id="menu-btn" class="lg:hidden text-white text-2xl z-50 relative" onclick="toggleMenu()">
+        <i class="bi bi-list" id="menu-icon"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div id="mobile-nav">
+    <ul class="flex flex-col items-center gap-6 text-center">
+      <li><a href="#hero" class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Inicio</a></li>
+      <li><a href="#about" class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Perfil</a></li>
+      <li><a href="#resume" class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Resumen</a></li>
+      <li><a href="#portfolio" class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Portafolio</a></li>
+      <li><a href="#services" class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Servicios</a></li>
+      <li><a href="#certifications" class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Certificados</a></li>
+      <li><a href="#contact" class="px-8 py-3 border border-accent text-accent font-mono text-sm tracking-widest uppercase hover:bg-accent hover:text-bg transition-all rounded" onclick="toggleMenu()">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero-grid relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Orbs -->
+    <div class="orb w-96 h-96 bg-accent/10 top-1/4 -left-24"></div>
+    <div class="orb w-64 h-64 bg-sky-800/20 bottom-1/4 right-0"></div>
+    
+    <!-- Scan line -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+      <div class="w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent animate-scan"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <!-- Status -->
+      <div class="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full border border-accent/20 bg-accent/5 backdrop-blur-sm">
+        <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+        <span class="font-mono text-xs text-slate-400 tracking-widest uppercase">Disponible para trabajar</span>
+      </div>
+
+      <h1 class="hero-title font-display font-extrabold text-6xl md:text-8xl text-white leading-none mb-4 tracking-tight">
+        Omar<br><span class="text-accent glow-text">Meneses</span>
+      </h1>
+
+      <p class="font-mono text-lg md:text-xl text-slate-400 mb-10">
+        Soy <span id="typed-text" class="text-accent typed"></span>
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#portfolio" class="px-8 py-3 bg-accent text-bg font-display font-bold text-sm tracking-widest uppercase rounded hover:bg-sky-400 transition-all glow-accent">
+          Ver Portafolio
+        </a>
+        <a href="#contact" class="px-8 py-3 border border-white/20 text-white font-display font-bold text-sm tracking-widest uppercase rounded hover:border-accent hover:text-accent transition-all">
+          Contactarme
+        </a>
+      </div>
+
+      <!-- Social links -->
+      <div class="flex items-center justify-center gap-5 mt-12">
+        <a href="https://www.linkedin.com/in/omar-fernando-meneses-daza/" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
+          <i class="bx bxl-linkedin text-lg"></i>
+        </a>
+        <a href="https://github.com/fernandomeneses99" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
+          <i class="bx bxl-github text-lg"></i>
+        </a>
+        <a href="https://wa.me/573133677048" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
+          <i class="bx bxl-whatsapp text-lg"></i>
+        </a>
+        <a href="https://www.instagram.com/fernando.meneses99/" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
+          <i class="bx bxl-instagram text-lg"></i>
+        </a>
+        <a href="https://www.facebook.com/fernando.meneses99" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-slate-400 hover:text-accent hover:border-accent transition-all">
+          <i class="bx bxl-facebook text-lg"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float">
+      <span class="font-mono text-xs text-slate-600 tracking-widest uppercase">Scroll</span>
+      <div class="w-px h-12 bg-gradient-to-b from-accent to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="py-12 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center reveal">
+        <div class="font-display font-extrabold text-4xl text-accent mb-1">2+</div>
+        <div class="font-mono text-xs text-slate-500 tracking-widest uppercase">Clientes Felices</div>
+      </div>
+      <div class="text-center reveal" style="transition-delay:.1s">
+        <div class="font-display font-extrabold text-4xl text-accent mb-1">2+</div>
+        <div class="font-mono text-xs text-slate-500 tracking-widest uppercase">Proyectos</div>
+      </div>
+      <div class="text-center reveal" style="transition-delay:.2s">
+        <div class="font-display font-extrabold text-4xl text-accent mb-1">1453</div>
+        <div class="font-mono text-xs text-slate-500 tracking-widest uppercase">Horas de Soporte</div>
+      </div>
+      <div class="text-center reveal" style="transition-delay:.3s">
+        <div class="font-display font-extrabold text-4xl text-accent mb-1">1</div>
+        <div class="font-mono text-xs text-slate-500 tracking-widest uppercase">Equipo de Trabajo</div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+
+        <!-- Section label -->
+        <div class="flex items-center gap-4 mb-16 reveal">
+          <span class="font-mono text-accent text-sm">01.</span>
+          <h2 class="font-display font-bold text-3xl text-white">Perfil Profesional</h2>
+          <div class="flex-1 h-px bg-white/5 max-w-xs"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-16 items-start">
+          <!-- Photo -->
+          <div class="lg:col-span-2 reveal">
+            <div class="relative">
+              <div class="absolute -inset-2 bg-accent/10 rounded-2xl blur-xl"></div>
+              <img src="assets/img/profile-img.jpg" alt="Omar Meneses" class="relative w-full max-w-sm mx-auto lg:mx-0 rounded-xl border border-white/10 object-cover aspect-square">
+              <div class="absolute -bottom-4 -right-4 w-24 h-24 border border-accent/30 rounded-xl hidden lg:block"></div>
+            </div>
+          </div>
+
+          <!-- Info -->
+          <div class="lg:col-span-3 reveal" style="transition-delay:.15s">
+            <h3 class="font-display font-bold text-2xl text-white mb-2">Desarrollador Web Jr</h3>
+            <p class="font-mono text-accent text-sm mb-6">Tecnólogo en Desarrollo de Software</p>
+
+            <p class="text-slate-400 leading-relaxed mb-8">
+              Apasionado por la creación de soluciones innovadoras y eficientes. Poseo sólidos conocimientos en PHP, HTML, CSS, C#, .NET y Python, MySQL, SQLServer, Bootstrap, Power BI, Power APPS, Power Automate, con enfoque en SCRUM, cuento con fácil adaptabilidad al cambio y aprendizaje continuo. Busco una oportunidad para aplicar mis habilidades técnicas y profesionales para contribuir al éxito de un equipo de desarrollo.
+            </p>
+
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-calendar3 text-accent text-sm"></i>
+                  <span class="font-mono text-xs text-slate-500 uppercase tracking-widest">Cumpleaños</span>
+                  <span class="text-sm text-slate-300 ml-auto">2 Dic 1999</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-phone text-accent text-sm"></i>
+                  <span class="font-mono text-xs text-slate-500 uppercase tracking-widest">Teléfono</span>
+                  <span class="text-sm text-slate-300 ml-auto">+57 313 367 7048</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-geo-alt text-accent text-sm"></i>
+                  <span class="font-mono text-xs text-slate-500 uppercase tracking-widest">Ciudad</span>
+                  <span class="text-sm text-slate-300 ml-auto">Bogotá, Colombia</span>
+                </div>
+              </div>
+              <div class="flex flex-col gap-3">
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-person text-accent text-sm"></i>
+                  <span class="font-mono text-xs text-slate-500 uppercase tracking-widest">Edad</span>
+                  <span class="text-sm text-slate-300 ml-auto" id="edad"></span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-mortarboard text-accent text-sm"></i>
+                  <span class="font-mono text-xs text-slate-500 uppercase tracking-widest">Grado</span>
+                  <span class="text-sm text-slate-300 ml-auto">Tecnólogo</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="bi bi-envelope text-accent text-sm"></i>
+                  <span class="font-mono text-xs text-slate-500 uppercase tracking-widest">Email</span>
+                  <span class="text-sm text-slate-300 ml-auto text-right">fernandomenesesda@gmail.com</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="py-20 px-6 bg-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-4 mb-16 reveal">
+          <span class="font-mono text-accent text-sm">02.</span>
+          <h2 class="font-display font-bold text-3xl text-white">Habilidades</h2>
+          <div class="flex-1 h-px bg-white/5 max-w-xs"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Skill item -->
+          <div class="reveal">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-display font-semibold text-white">HTML</span>
+              <span class="font-mono text-accent text-sm">75%</span>
+            </div>
+            <div class="h-px bg-white/5 w-full relative overflow-hidden">
+              <div class="skill-fill absolute top-0 left-0" style="width:0" data-width="75%"></div>
+            </div>
+            <div class="w-1.5 h-1.5 bg-accent rounded-full mt-0 -translate-y-0.5" style="margin-left:75%; margin-top:-3px; box-shadow: 0 0 6px #38bdf8"></div>
+          </div>
+
+          <div class="reveal" style="transition-delay:.05s">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-display font-semibold text-white">PHP</span>
+              <span class="font-mono text-accent text-sm">40%</span>
+            </div>
+            <div class="h-px bg-white/5 w-full relative overflow-hidden">
+              <div class="skill-fill absolute top-0 left-0" style="width:0" data-width="40%"></div>
+            </div>
+            <div class="w-1.5 h-1.5 bg-accent rounded-full" style="margin-left:40%; margin-top:-3px; box-shadow: 0 0 6px #38bdf8"></div>
+          </div>
+
+          <div class="reveal" style="transition-delay:.1s">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-display font-semibold text-white">CSS</span>
+              <span class="font-mono text-accent text-sm">35%</span>
+            </div>
+            <div class="h-px bg-white/5 w-full relative overflow-hidden">
+              <div class="skill-fill absolute top-0 left-0" style="width:0" data-width="35%"></div>
+            </div>
+            <div class="w-1.5 h-1.5 bg-accent rounded-full" style="margin-left:35%; margin-top:-3px; box-shadow: 0 0 6px #38bdf8"></div>
+          </div>
+
+          <div class="reveal" style="transition-delay:.15s">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-display font-semibold text-white">C# / .NET / Microservicios</span>
+              <span class="font-mono text-accent text-sm">45%</span>
+            </div>
+            <div class="h-px bg-white/5 w-full relative overflow-hidden">
+              <div class="skill-fill absolute top-0 left-0" style="width:0" data-width="45%"></div>
+            </div>
+            <div class="w-1.5 h-1.5 bg-accent rounded-full" style="margin-left:45%; margin-top:-3px; box-shadow: 0 0 6px #38bdf8"></div>
+          </div>
+
+          <div class="reveal" style="transition-delay:.2s">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-display font-semibold text-white">JavaScript</span>
+              <span class="font-mono text-accent text-sm">25%</span>
+            </div>
+            <div class="h-px bg-white/5 w-full relative overflow-hidden">
+              <div class="skill-fill absolute top-0 left-0" style="width:0" data-width="25%"></div>
+            </div>
+            <div class="w-1.5 h-1.5 bg-accent rounded-full" style="margin-left:25%; margin-top:-3px; box-shadow: 0 0 6px #38bdf8"></div>
+          </div>
+
+          <div class="reveal" style="transition-delay:.25s">
+            <div class="flex justify-between items-center mb-2">
+              <span class="font-display font-semibold text-white">SQLServer / MySQL</span>
+              <span class="font-mono text-accent text-sm">55%</span>
+            </div>
+            <div class="h-px bg-white/5 w-full relative overflow-hidden">
+              <div class="skill-fill absolute top-0 left-0" style="width:0" data-width="55%"></div>
+            </div>
+            <div class="w-1.5 h-1.5 bg-accent rounded-full" style="margin-left:55%; margin-top:-3px; box-shadow: 0 0 6px #38bdf8"></div>
+          </div>
+        </div>
+
+        <!-- Tech badges -->
+        <div class="mt-12 flex flex-wrap gap-2 reveal">
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Power BI</span>
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Power Apps</span>
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Power Automate</span>
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Bootstrap</span>
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Python</span>
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Scrum</span>
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">WordPress / CMS</span>
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Active Directory</span>
+          <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Soporte TI</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESUME ===== -->
+    <section id="resume" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-4 mb-16 reveal">
+          <span class="font-mono text-accent text-sm">03.</span>
+          <h2 class="font-display font-bold text-3xl text-white">Resumen</h2>
+          <div class="flex-1 h-px bg-white/5 max-w-xs"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-16">
+
+          <!-- Education -->
+          <div class="reveal">
+            <h3 class="font-display font-bold text-xl text-white mb-8 flex items-center gap-3">
+              <i class="bi bi-mortarboard-fill text-accent"></i> Educación
+            </h3>
+
+            <div class="border-l border-white/10 pl-6 space-y-8">
+              <div class="timeline-item relative">
+                <span class="font-mono text-accent text-xs tracking-widest uppercase">2022 — 2025</span>
+                <h4 class="font-display font-semibold text-white mt-1">Tecnólogo en Desarrollo de Software</h4>
+                <p class="text-slate-500 text-sm mt-1">Servicio Nacional de Aprendizaje — SENA, Bogotá</p>
+              </div>
+              <div class="timeline-item relative">
+                <span class="font-mono text-accent text-xs tracking-widest uppercase">2018 — 2019</span>
+                <h4 class="font-display font-semibold text-white mt-1">Bachiller Académico</h4>
+                <p class="text-slate-500 text-sm mt-1">Centro de Estudios Técnicos, Antioquia</p>
+              </div>
+              <div class="timeline-item relative">
+                <span class="font-mono text-accent text-xs tracking-widest uppercase">2023</span>
+                <h4 class="font-display font-semibold text-white mt-1">Variables y Estructuras de Control en Python</h4>
+                <p class="text-slate-500 text-sm mt-1">Servicio Nacional de Aprendizaje — SENA, Bogotá</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div class="reveal" style="transition-delay:.15s">
+            <h3 class="font-display font-bold text-xl text-white mb-8 flex items-center gap-3">
+              <i class="bi bi-briefcase-fill text-accent"></i> Experiencia
+            </h3>
+
+            <div class="space-y-3">
+
+              <!-- Exp 1 -->
+              <div class="border border-white/8 rounded-xl overflow-hidden bg-surface/30">
+                <button class="acc-btn w-full text-left p-5 flex justify-between items-start gap-3" onclick="toggleAcc(this)">
+                  <div>
+                    <p class="font-display font-semibold text-white text-sm">Desarrollador Web Jr</p>
+                    <p class="font-mono text-xs text-accent mt-0.5">Dolphin Telecomunications — Jul 2024 / Ene 2025</p>
+                  </div>
+                  <i class="bi bi-chevron-down chevron text-slate-500 text-sm mt-1 flex-shrink-0"></i>
+                </button>
+                <div class="acc-content px-5 pb-0">
+                  <ul class="space-y-2 pb-5">
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Diseño y desarrollo de aplicaciones web dinámicas con CMS, PHP, MySQL, HTML, CSS y JavaScript.</li>
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Interfaces responsivas con Bootstrap bajo metodología Scrum.</li>
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Implementación de funcionalidades, resolución de errores y soporte al producto final.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Exp 2 -->
+              <div class="border border-white/8 rounded-xl overflow-hidden bg-surface/30">
+                <button class="acc-btn w-full text-left p-5 flex justify-between items-start gap-3" onclick="toggleAcc(this)">
+                  <div>
+                    <p class="font-display font-semibold text-white text-sm">Soporte Técnico Lvl II</p>
+                    <p class="font-mono text-xs text-accent mt-0.5">Evertec Colombia S.A.S — Mar 2025 / Jun 2025</p>
+                  </div>
+                  <i class="bi bi-chevron-down chevron text-slate-500 text-sm mt-1 flex-shrink-0"></i>
+                </button>
+                <div class="acc-content px-5 pb-0">
+                  <ul class="space-y-2 pb-5">
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Gestión y administración de Active Directory.</li>
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Atención y resolución de incidencias TI en entornos Windows, soporte local y remoto.</li>
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Administración de bases de datos empresariales y documentación de procesos TI.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Exp 3 -->
+              <div class="border border-white/8 rounded-xl overflow-hidden bg-surface/30">
+                <button class="acc-btn w-full text-left p-5 flex justify-between items-start gap-3" onclick="toggleAcc(this)">
+                  <div>
+                    <p class="font-display font-semibold text-white text-sm">Analista de Soporte TI</p>
+                    <p class="font-mono text-xs text-accent mt-0.5">Avalora — Jun 2025 / Actual</p>
+                  </div>
+                  <i class="bi bi-chevron-down chevron text-slate-500 text-sm mt-1 flex-shrink-0"></i>
+                </button>
+                <div class="acc-content px-5 pb-0">
+                  <ul class="space-y-2 pb-5">
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Garantizar el funcionamiento eficiente, seguro y continuo de los sistemas de información.</li>
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Soporte técnico presencial y remoto Nivel 1 y 2.</li>
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Instalación, configuración y mantenimiento preventivo de equipos.</li>
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Gestión de cuentas, inventario de equipos y licencias de software.</li>
+                    <li class="flex gap-2 text-sm text-slate-400"><span class="text-accent mt-1">›</span> Documentación de incidencias, implementación de mejoras y cumplimiento de normativas.</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio" class="py-24 px-6 bg-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-4 mb-16 reveal">
+          <span class="font-mono text-accent text-sm">04.</span>
+          <h2 class="font-display font-bold text-3xl text-white">Portafolio</h2>
+          <div class="flex-1 h-px bg-white/5 max-w-xs"></div>
+        </div>
+
+        <!-- Filters -->
+        <div class="flex flex-wrap gap-2 mb-10 reveal">
+          <button class="filter-btn active font-mono text-xs px-4 py-2 rounded border border-accent/30 text-slate-300 hover:text-bg transition-all" data-filter="*">Todo</button>
+          <button class="filter-btn font-mono text-xs px-4 py-2 rounded border border-white/10 text-slate-400 hover:border-accent/30 hover:text-accent transition-all" data-filter="filter-app">App</button>
+          <button class="filter-btn font-mono text-xs px-4 py-2 rounded border border-white/10 text-slate-400 hover:border-accent/30 hover:text-accent transition-all" data-filter="filter-web">Web</button>
+          <button class="filter-btn font-mono text-xs px-4 py-2 rounded border border-white/10 text-slate-400 hover:border-accent/30 hover:text-accent transition-all" data-filter="filter-starup">StarUp</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid md:grid-cols-3 gap-6">
+
+          <div class="portfolio-item filter-web reveal">
+            <div class="card-hover rounded-xl overflow-hidden border border-white/8 bg-surface group cursor-pointer">
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img src="assets/img/portfolio/portfolio-1.jpg" alt="PizzaHouse" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <a href="assets/img/portfolio/Krokori.jpg" class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-bg hover:scale-110 transition-transform">
+                    <i class="bi bi-zoom-in text-sm"></i>
+                  </a>
+                  <a href="portfolio-details.html" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:scale-110 transition-transform">
+                    <i class="bi bi-arrow-up-right text-sm"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-5">
+                <span class="font-mono text-xs text-accent uppercase tracking-widest">Web</span>
+                <h4 class="font-display font-semibold text-white mt-1">PizzaHouse</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item filter-app reveal" style="transition-delay:.1s">
+            <div class="card-hover rounded-xl overflow-hidden border border-white/8 bg-surface group cursor-pointer">
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img src="assets/img/portfolio/portfolio-2.jpg" alt="Dolphin Tele" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <a href="assets/img/portfolio/dolphintele.jpg" class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-bg hover:scale-110 transition-transform">
+                    <i class="bi bi-zoom-in text-sm"></i>
+                  </a>
+                  <a href="https://dolphintele.com/" target="_blank" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:scale-110 transition-transform">
+                    <i class="bi bi-arrow-up-right text-sm"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-5">
+                <span class="font-mono text-xs text-accent uppercase tracking-widest">App</span>
+                <h4 class="font-display font-semibold text-white mt-1">Dolphin Telecomunications</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item filter-starup reveal" style="transition-delay:.2s">
+            <div class="card-hover rounded-xl overflow-hidden border border-white/8 bg-surface group cursor-pointer">
+              <div class="relative overflow-hidden aspect-[4/3]">
+                <img src="assets/img/portfolio/portfolio-details-1.png" alt="NovaSoft" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="absolute inset-0 bg-bg/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <a href="assets/img/portfolio/portfolio-details-3.png" class="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-bg hover:scale-110 transition-transform">
+                    <i class="bi bi-zoom-in text-sm"></i>
+                  </a>
+                  <a href="portfolio-details.html" class="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:scale-110 transition-transform">
+                    <i class="bi bi-arrow-up-right text-sm"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="p-5">
+                <span class="font-mono text-xs text-accent uppercase tracking-widest">StarUp</span>
+                <h4 class="font-display font-semibold text-white mt-1">NovaSoft S.A.S</h4>
+                <p class="text-slate-500 text-xs mt-1">Empresa de desarrollo de software especializada en soluciones innovadoras para la gestión empresarial.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-4 mb-16 reveal">
+          <span class="font-mono text-accent text-sm">05.</span>
+          <h2 class="font-display font-bold text-3xl text-white">Servicios</h2>
+          <div class="flex-1 h-px bg-white/5 max-w-xs"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+          <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
+              <i class="bi bi-briefcase text-accent"></i>
+            </div>
+            <h4 class="font-display font-semibold text-white mb-2">Creación de Landing Pages</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Diseño, desarrollo e implementación de páginas de aterrizaje enfocadas en la conversión y CTAs efectivas.</p>
+          </div>
+
+          <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal" style="transition-delay:.1s">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
+              <i class="bi bi-search text-accent"></i>
+            </div>
+            <h4 class="font-display font-semibold text-white mb-2">Optimización SEO</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Implementación de prácticas SEO on-page, etiquetas meta, estructuras de encabezados, optimización de imágenes y contenido.</p>
+          </div>
+
+          <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal" style="transition-delay:.2s">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
+              <i class="bi bi-bar-chart text-accent"></i>
+            </div>
+            <h4 class="font-display font-semibold text-white mb-2">Consultoría y Capacitación</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Asesoramiento para pequeñas empresas y emprendedores sobre presencia web y herramientas como WordPress.</p>
+          </div>
+
+          <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal" style="transition-delay:.05s">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
+              <i class="bi bi-tools text-accent"></i>
+            </div>
+            <h4 class="font-display font-semibold text-white mb-2">Soporte Técnico</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Resolución de problemas en sitios web, configuración de dominios, hosting y correos electrónicos.</p>
+          </div>
+
+          <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal" style="transition-delay:.15s">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
+              <i class="bi bi-code-slash text-accent"></i>
+            </div>
+            <h4 class="font-display font-semibold text-white mb-2">Desarrollo Frontend</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Creación de interfaces con Bootstrap e implementación de componentes interactivos con JavaScript.</p>
+          </div>
+
+          <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal" style="transition-delay:.25s">
+            <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center mb-4">
+              <i class="bi bi-arrow-repeat text-accent"></i>
+            </div>
+            <h4 class="font-display font-semibold text-white mb-2">Mantenimiento Web</h4>
+            <p class="text-slate-500 text-sm leading-relaxed">Actualización de contenido, corrección de errores, optimización de velocidad y actualización de temas o plugins.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section id="certifications" class="py-24 px-6 bg-surface/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-4 mb-16 reveal">
+          <span class="font-mono text-accent text-sm">06.</span>
+          <h2 class="font-display font-bold text-3xl text-white">Certificados</h2>
+          <div class="flex-1 h-px bg-white/5 max-w-xs"></div>
+        </div>
+
+        <div class="flex justify-center reveal">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="195122de-8e95-4096-be8b-1cc122f44991" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex items-center gap-4 mb-16 reveal">
+          <span class="font-mono text-accent text-sm">07.</span>
+          <h2 class="font-display font-bold text-3xl text-white">Contacto</h2>
+          <div class="flex-1 h-px bg-white/5 max-w-xs"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-5 gap-12">
+          <!-- Info -->
+          <div class="lg:col-span-2 space-y-8 reveal">
+            <p class="text-slate-400 leading-relaxed">¿Tienes un proyecto en mente? Me gustaría escucharte. Envíame un mensaje y te responderé lo antes posible.</p>
+            
+            <div class="space-y-5">
+              <div class="flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                  <i class="bi bi-geo-alt text-accent"></i>
+                </div>
+                <div>
+                  <p class="font-mono text-xs text-slate-500 uppercase tracking-widest">Dirección</p>
+                  <p class="text-slate-300 text-sm">Cra 81J # 57d - 02 Sur, Bogotá</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                  <i class="bi bi-envelope text-accent"></i>
+                </div>
+                <div>
+                  <p class="font-mono text-xs text-slate-500 uppercase tracking-widest">Email</p>
+                  <p class="text-slate-300 text-sm">fernandomenesesda@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                  <i class="bi bi-phone text-accent"></i>
+                </div>
+                <div>
+                  <p class="font-mono text-xs text-slate-500 uppercase tracking-widest">Teléfono</p>
+                  <p class="text-slate-300 text-sm">+57 313 367 7048</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="lg:col-span-3 reveal" style="transition-delay:.15s">
+            <form id="contact-form" class="space-y-5">
+              <div class="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label class="block font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">Su nombre</label>
+                  <input type="text" name="user_name" class="form-input" required>
+                </div>
+                <div>
+                  <label class="block font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">Su correo</label>
+                  <input type="email" name="user_email" class="form-input" required>
+                </div>
+              </div>
+              <div>
+                <label class="block font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">Asunto</label>
+                <input type="text" name="subject" class="form-input" required>
+              </div>
+              <div>
+                <label class="block font-mono text-xs text-slate-500 uppercase tracking-widest mb-2">Mensaje</label>
+                <textarea name="message" rows="6" class="form-input resize-none" required></textarea>
+              </div>
+
+              <div id="form-loading" class="hidden font-mono text-xs text-slate-500 text-center py-2">Enviando...</div>
+              <div id="form-error" class="hidden font-mono text-xs text-red-400 text-center py-2"></div>
+              <div id="form-success" class="hidden font-mono text-xs text-green-400 text-center py-2">✓ Su mensaje ha sido enviado. ¡Gracias!</div>
+
+              <button type="submit" class="w-full py-3 bg-accent text-bg font-display font-bold text-sm tracking-widest uppercase rounded hover:bg-sky-400 transition-all glow-accent">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-8 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="font-display font-bold text-white">OM<span class="text-accent">.</span></span>
+      <p class="font-mono text-xs text-slate-600">© Omar Meneses <span id="year"></span> · Bogotá, Colombia</p>
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/in/omar-fernando-meneses-daza/" target="_blank" class="text-slate-600 hover:text-accent transition-colors text-lg"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/fernandomeneses99" target="_blank" class="text-slate-600 hover:text-accent transition-colors text-lg"><i class="bx bxl-github"></i></a>
+        <a href="https://wa.me/573133677048" target="_blank" class="text-slate-600 hover:text-accent transition-colors text-lg"><i class="bx bxl-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#hero" id="back-top" class="fixed bottom-6 right-6 w-10 h-10 rounded-full bg-accent text-bg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 glow-accent z-50">
+    <i class="bi bi-arrow-up text-sm font-bold"></i>
+  </a>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      const backTop = document.getElementById('back-top');
+      if (window.scrollY > 400) {
+        backTop.style.opacity = '1';
+        backTop.style.pointerEvents = 'auto';
+      } else {
+        backTop.style.opacity = '0';
+        backTop.style.pointerEvents = 'none';
+      }
+    });
+
+    // Mobile menu
+    function toggleMenu() {
+      const nav = document.getElementById('mobile-nav');
+      const icon = document.getElementById('menu-icon');
+      nav.classList.toggle('open');
+      icon.className = nav.classList.contains('open') ? 'bi bi-x-lg' : 'bi bi-list';
+    }
+
+    // Typed effect
+    const words = ['Diseñador', 'Desarrollador', 'Freelancer'];
+    let wi = 0, ci = 0, deleting = false;
+    const el = document.getElementById('typed-text');
+    function type() {
+      const word = words[wi];
+      if (!deleting) {
+        el.textContent = word.slice(0, ++ci);
+        if (ci === word.length) { deleting = true; setTimeout(type, 1500); return; }
+      } else {
+        el.textContent = word.slice(0, --ci);
+        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
+      }
+      setTimeout(type, deleting ? 60 : 100);
+    }
+    type();
+
+    // Age
+    function calcularEdad(f) {
+      const h = new Date(), n = new Date(f);
+      let e = h.getFullYear() - n.getFullYear();
+      const m = h.getMonth() - n.getMonth();
+      if (m < 0 || (m === 0 && h.getDate() < n.getDate())) e--;
+      return e;
+    }
+    document.getElementById('edad').textContent = calcularEdad('1999-12-02') + ' años';
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Skill bars
+    const skillObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.querySelectorAll('.skill-fill').forEach(bar => {
+            bar.style.width = bar.dataset.width;
+          });
+          skillObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('#skills').forEach(el => skillObs.observe(el));
+
+    // Accordion
+    function toggleAcc(btn) {
+      const content = btn.nextElementSibling;
+      const isOpen = content.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.acc-content').forEach(c => c.classList.remove('open'));
+      document.querySelectorAll('.acc-btn').forEach(b => b.classList.remove('open'));
+      // Open clicked if was closed
+      if (!isOpen) {
+        content.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
+
+    // Portfolio filter
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          if (filter === '*' || item.classList.contains(filter)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // EmailJS
+    (function(){ emailjs.init("v9Gg4_hoWSHtFF_yI"); })();
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('form-loading').classList.remove('hidden');
+      document.getElementById('form-success').classList.add('hidden');
+      document.getElementById('form-error').classList.add('hidden');
+      emailjs.sendForm('service_mp1yyv8', 'template_hyen2gi', this)
+        .then(() => {
+          document.getElementById('form-loading').classList.add('hidden');
+          document.getElementById('form-success').classList.remove('hidden');
+          this.reset();
+        }, (err) => {
+          document.getElementById('form-loading').classList.add('hidden');
+          document.getElementById('form-error').textContent = 'Error al enviar: ' + JSON.stringify(err);
+          document.getElementById('form-error').classList.remove('hidden');
+        });
+    });
+  </script>
 
 </body>
-
 </html>
-
-

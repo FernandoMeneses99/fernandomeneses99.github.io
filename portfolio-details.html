@@ -1,168 +1,598 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" class="scroll-smooth">
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaSoft S.A.S — Detalle | Omar Meneses</title>
 
-  <title>Portafolio Detalles</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@300;400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            mono:    ['IBM Plex Mono', 'monospace'],
+            body:    ['DM Sans', 'sans-serif'],
+          },
+          colors: {
+            'bg':      '#070b12',
+            'surface': '#0d1420',
+            'surface2':'#111827',
+            'accent':  '#38bdf8',
+            'accent2': '#0ea5e9',
+            'muted':   '#4b5563',
+            'subtle':  '#1e293b',
+          },
+          keyframes: {
+            scan: {
+              '0%':   { transform: 'translateY(-100%)' },
+              '100%': { transform: 'translateY(100vh)' },
+            },
+            float: {
+              '0%,100%': { transform: 'translateY(0px)' },
+              '50%':     { transform: 'translateY(-10px)' },
+            },
+            fadeUp: {
+              '0%':   { opacity: '0', transform: 'translateY(24px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+          },
+          animation: {
+            'scan':     'scan 3s linear infinite',
+            'float':    'float 5s ease-in-out infinite',
+            'fade-up':  'fadeUp 0.6s ease forwards',
+          },
+        }
+      }
+    }
+  </script>
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: #070b12;
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    /* Grain */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 9999; opacity: 0.4;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #070b12; }
+    ::-webkit-scrollbar-thumb { background: #38bdf8; border-radius: 2px; }
+
+    /* Navbar */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1rem 2rem;
+      transition: all 0.3s ease;
+    }
+    #navbar.scrolled {
+      background: rgba(7,11,18,0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(56,189,248,0.1);
+    }
+
+    /* Glows */
+    .glow-text   { text-shadow: 0 0 40px rgba(56,189,248,0.5); }
+    .glow-border { box-shadow: 0 0 20px rgba(56,189,248,0.15), inset 0 0 20px rgba(56,189,248,0.03); }
+    .glow-accent { box-shadow: 0 0 30px rgba(56,189,248,0.4); }
+
+    /* Grid bg */
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* Orb */
+    .orb {
+      position: absolute; border-radius: 50%;
+      filter: blur(80px); pointer-events: none;
+    }
+
+    /* Card hover */
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 60px rgba(56,189,248,0.1);
+      border-color: rgba(56,189,248,0.4) !important;
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* Mobile nav */
+    #mobile-nav {
+      display: none; position: fixed; inset: 0;
+      background: rgba(7,11,18,0.98); z-index: 999;
+      flex-direction: column; align-items: center; justify-content: center; gap: 2rem;
+    }
+    #mobile-nav.open { display: flex; }
+
+    /* Slider */
+    .slide { display: none; }
+    .slide.active { display: block; }
+
+    .thumb-btn { transition: opacity 0.2s, border-color 0.2s; }
+    .thumb-btn.active { border-color: #38bdf8 !important; opacity: 1 !important; }
+    .thumb-btn:not(.active) { opacity: 0.45; }
+
+    /* Lightbox */
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 9998;
+      background: rgba(7,11,18,0.95); backdrop-filter: blur(20px);
+      align-items: center; justify-content: center;
+    }
+    #lightbox.open { display: flex; }
+
+    /* Breadcrumb line */
+    .bc-line { background: linear-gradient(90deg, #38bdf8, transparent); }
+
+    /* Info row */
+    .info-row { border-bottom: 1px solid rgba(255,255,255,0.05); }
+    .info-row:last-child { border-bottom: none; }
+
+    /* Progress dots */
+    .dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(56,189,248,0.25);
+      transition: all 0.3s ease; cursor: pointer;
+    }
+    .dot.active { background: #38bdf8; box-shadow: 0 0 8px #38bdf8; width: 20px; border-radius: 3px; }
+
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position:  200% center; }
+    }
+    .shimmer {
+      background: linear-gradient(90deg, transparent, rgba(56,189,248,0.08), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 2.5s infinite;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-bg text-slate-300">
 
-  <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="d-flex flex-column">
-
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light">Omar Meneses</h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://www.facebook.com/fernando.meneses99" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="https://www.instagram.com/fernando.meneses99/" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="https://wa.me/573133677048" class="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
-          <a href="https://www.linkedin.com/in/omar-fernando-meneses-daza-80a943190/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-          <a href="https://github.com/fernandomeneses99" class="linkedin"><i class="bx bxl-github"></i></a>
-        </div>
-      </div>
-
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Acerca de</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portafolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Servicios</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="font-display font-bold text-white text-lg tracking-tight">
+        OM<span class="text-accent">.</span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-8">
+        <li><a href="index.html#hero"           class="font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Inicio</a></li>
+        <li><a href="index.html#about"          class="font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Perfil</a></li>
+        <li><a href="index.html#resume"         class="font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Resumen</a></li>
+        <li><a href="index.html#portfolio"      class="font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Portafolio</a></li>
+        <li><a href="index.html#services"       class="font-mono text-xs text-slate-400 hover:text-accent transition-colors tracking-widest uppercase">Servicios</a></li>
+        <li><a href="index.html#contact"        class="px-5 py-2 border border-accent text-accent font-mono text-xs tracking-widest uppercase hover:bg-accent hover:text-bg transition-all rounded">Contacto</a></li>
+      </ul>
+      <button class="lg:hidden text-white text-2xl z-50 relative" onclick="toggleMenu()">
+        <i class="bi bi-list" id="menu-icon"></i>
+      </button>
     </div>
-  </header><!-- Fin Header -->
+  </nav>
 
-  <main id="main">
+  <!-- Mobile nav -->
+  <div id="mobile-nav">
+    <ul class="flex flex-col items-center gap-6 text-center">
+      <li><a href="index.html"          class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Inicio</a></li>
+      <li><a href="index.html#about"    class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Perfil</a></li>
+      <li><a href="index.html#resume"   class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Resumen</a></li>
+      <li><a href="index.html#portfolio" class="font-display text-2xl text-white hover:text-accent" onclick="toggleMenu()">Portafolio</a></li>
+      <li><a href="index.html#contact"  class="px-8 py-3 border border-accent text-accent font-mono text-sm tracking-widest uppercase hover:bg-accent hover:text-bg transition-all rounded" onclick="toggleMenu()">Contacto</a></li>
+    </ul>
+  </div>
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
+  <!-- ===== PAGE HEADER ===== -->
+  <div class="hero-grid relative pt-28 pb-12 px-6 overflow-hidden">
+    <div class="orb w-80 h-80 bg-accent/10 top-0 right-0"></div>
+    <div class="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
+      <div class="w-full h-px bg-gradient-to-r from-transparent via-accent to-transparent animate-scan"></div>
+    </div>
 
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>INFORMACIÓN</h2>
-          <ol>
-            <li><a href="index.html">Inicio</a></li>
-            <li>Portafolio Detalles</li>
-          </ol>
+    <div class="max-w-7xl mx-auto relative z-10">
+
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-3 mb-8 reveal">
+        <div class="h-px w-10 bc-line"></div>
+        <a href="index.html" class="font-mono text-xs text-slate-500 hover:text-accent transition-colors tracking-widest uppercase">Inicio</a>
+        <span class="font-mono text-xs text-slate-700">/</span>
+        <a href="index.html#portfolio" class="font-mono text-xs text-slate-500 hover:text-accent transition-colors tracking-widest uppercase">Portafolio</a>
+        <span class="font-mono text-xs text-slate-700">/</span>
+        <span class="font-mono text-xs text-accent tracking-widest uppercase">NovaSoft</span>
+      </div>
+
+      <!-- Title block -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+        <div class="reveal" style="transition-delay:.1s">
+          <div class="flex items-center gap-2 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-accent/20 bg-accent/5 font-mono text-xs text-accent tracking-widest uppercase">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
+              StarUp
+            </span>
+          </div>
+          <h1 class="font-display font-extrabold text-4xl lg:text-6xl text-white leading-tight glow-text">
+            NovaSoft<span class="text-accent">.</span>
+          </h1>
+          <p class="font-body text-slate-400 mt-2 text-lg">Soluciones tecnológicas para la transformación empresarial</p>
         </div>
 
+        <div class="flex items-center gap-3 reveal" style="transition-delay:.2s">
+          <a href="https://photographyytravels.rf.gd/" target="_blank"
+             class="flex items-center gap-2 px-5 py-2.5 bg-accent text-bg font-display font-bold text-sm tracking-widest uppercase rounded hover:bg-sky-400 transition-all glow-accent">
+            <i class="bi bi-arrow-up-right-circle-fill"></i> Ver sitio
+          </a>
+          <a href="index.html#portfolio"
+             class="flex items-center gap-2 px-5 py-2.5 border border-white/15 text-slate-300 font-mono text-xs tracking-widest uppercase rounded hover:border-accent hover:text-accent transition-all">
+            <i class="bi bi-arrow-left"></i> Volver
+          </a>
+        </div>
       </div>
-    </section><!-- End Breadcrumbs -->
+    </div>
+  </div>
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="max-w-7xl mx-auto px-6 py-16">
+    <div class="grid lg:grid-cols-12 gap-10">
 
-        <div class="row gy-4">
+      <!-- ── LEFT: Image slider ── -->
+      <div class="lg:col-span-8 reveal">
 
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
+        <!-- Main image -->
+        <div class="relative rounded-xl overflow-hidden border border-white/8 bg-surface glow-border group">
 
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.png" alt="">
-                </div>
+          <!-- Slides -->
+          <div class="relative aspect-video overflow-hidden">
+            <div class="slide active" id="slide-0">
+              <img src="assets/img/portfolio/portfolio-details-1.png" alt="NovaSoft – Vista 1"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-zoom-in"
+                   onclick="openLight(0)">
+            </div>
+            <div class="slide" id="slide-1">
+              <img src="assets/img/portfolio/portfolio-details-2.png" alt="NovaSoft – Vista 2"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-zoom-in"
+                   onclick="openLight(1)">
+            </div>
+            <div class="slide" id="slide-2">
+              <img src="assets/img/portfolio/portfolio-details-3.png" alt="NovaSoft – Vista 3"
+                   class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 cursor-zoom-in"
+                   onclick="openLight(2)">
+            </div>
 
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.png" alt="">
-                </div>
+            <!-- Prev / Next arrows -->
+            <button onclick="prevSlide()"
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-bg/80 border border-white/10 flex items-center justify-center text-slate-300 hover:text-accent hover:border-accent transition-all backdrop-blur-sm">
+              <i class="bi bi-chevron-left text-sm"></i>
+            </button>
+            <button onclick="nextSlide()"
+              class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-bg/80 border border-white/10 flex items-center justify-center text-slate-300 hover:text-accent hover:border-accent transition-all backdrop-blur-sm">
+              <i class="bi bi-chevron-right text-sm"></i>
+            </button>
 
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.png" alt="">
-                </div>
+            <!-- Zoom hint -->
+            <div class="absolute bottom-3 right-3 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-bg/70 border border-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              <i class="bi bi-zoom-in text-accent text-xs"></i>
+              <span class="font-mono text-[10px] text-slate-400 tracking-widest">AMPLIAR</span>
+            </div>
 
+            <!-- Slide counter -->
+            <div class="absolute top-3 left-3 px-3 py-1 rounded-full bg-bg/70 border border-white/10 backdrop-blur-sm">
+              <span class="font-mono text-[10px] text-accent" id="slide-counter">01 / 03</span>
+            </div>
+          </div>
+
+          <!-- Shimmer line -->
+          <div class="h-px shimmer"></div>
+
+          <!-- Dots -->
+          <div class="flex items-center justify-center gap-2 py-4">
+            <button class="dot active" id="dot-0" onclick="goSlide(0)"></button>
+            <button class="dot"        id="dot-1" onclick="goSlide(1)"></button>
+            <button class="dot"        id="dot-2" onclick="goSlide(2)"></button>
+          </div>
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="grid grid-cols-3 gap-3 mt-4">
+          <button class="thumb-btn active rounded-lg overflow-hidden border-2 border-transparent focus:outline-none aspect-video" id="thumb-0" onclick="goSlide(0)">
+            <img src="assets/img/portfolio/portfolio-details-1.png" alt="Vista 1" class="w-full h-full object-cover">
+          </button>
+          <button class="thumb-btn rounded-lg overflow-hidden border-2 border-transparent focus:outline-none aspect-video" id="thumb-1" onclick="goSlide(1)">
+            <img src="assets/img/portfolio/portfolio-details-2.png" alt="Vista 2" class="w-full h-full object-cover">
+          </button>
+          <button class="thumb-btn rounded-lg overflow-hidden border-2 border-transparent focus:outline-none aspect-video" id="thumb-2" onclick="goSlide(2)">
+            <img src="assets/img/portfolio/portfolio-details-3.png" alt="Vista 3" class="w-full h-full object-cover">
+          </button>
+        </div>
+
+        <!-- ── Description cards ── -->
+        <div class="grid sm:grid-cols-2 gap-5 mt-10">
+
+          <!-- Misión -->
+          <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal" style="transition-delay:.1s">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
+                <i class="bi bi-bullseye text-accent text-sm"></i>
               </div>
-              <div class="swiper-pagination"></div>
+              <h2 class="font-display font-bold text-white text-lg">Misión</h2>
             </div>
+            <p class="font-body text-slate-400 text-sm leading-relaxed">
+              En <strong class="text-slate-300">Novasoft S.A.S.</strong>, desarrollamos soluciones tecnológicas innovadoras, personalizadas y de alta calidad para transformar los procesos empresariales de nuestros clientes. Nuestro objetivo es empoderar a las organizaciones mediante el diseño de software eficiente y escalable que impulse su crecimiento, garantizando un servicio integral, sostenible y orientado a la excelencia.
+            </p>
           </div>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Información del Proyecto</h3>
-              <ul>
-                <li><strong>Categoría</strong>: El inicio de mi StarUp</li>
-                <li><strong>Cliente</strong>:NovaSoft S.A.S</li>
-                <li><strong>Fecha Creación</strong>: 01 Marzo, 2025</li>
-                <li><strong>URL</strong>:<a href="https://photographyytravels.rf.gd/">www.photographyytravels.rf.gd</a></li>
-              </ul>
+          <!-- Visión -->
+          <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal" style="transition-delay:.2s">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-9 h-9 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
+                <i class="bi bi-eye text-accent text-sm"></i>
+              </div>
+              <h2 class="font-display font-bold text-white text-lg">Visión</h2>
             </div>
-            <div class="portfolio-description">
-              <h2>Misión</h2>
-              <p>
-En <b>Novasoft S.A.S.</b>, desarrollamos soluciones tecnológicas innovadoras, personalizadas y de alta calidad para transformar los procesos empresariales de nuestros clientes. Nuestro objetivo es empoderar a las organizaciones mediante el diseño de software eficiente y escalable que impulse su crecimiento, garantizando un servicio integral, sostenible y orientado a la excelencia.
-              </p>
-            </div>
-            <div class="portfolio-description">
-              <h2>Visión</h2>
-              <p>
-                Para 2030, <b>Novasoft S.A.S.</b> será reconocida como un líder global en el desarrollo de software y soluciones digitales innovadoras, destacándonos por nuestra capacidad de adaptación a las tendencias tecnológicas y por nuestro compromiso con la transformación digital de empresas en diversos sectores. Seremos una empresa referente en el sector por nuestra ética, sostenibilidad y enfoque en la satisfacción del cliente.
-              </p>
-            </div>
+            <p class="font-body text-slate-400 text-sm leading-relaxed">
+              Para 2030, <strong class="text-slate-300">Novasoft S.A.S.</strong> será reconocida como líder global en el desarrollo de software y soluciones digitales innovadoras, destacándonos por nuestra capacidad de adaptación a las tendencias tecnológicas y por nuestro compromiso con la transformación digital de empresas en diversos sectores, con énfasis en ética, sostenibilidad y satisfacción del cliente.
+            </p>
           </div>
-          </div>
-
         </div>
 
       </div>
-    </section><!-- End Portfolio Details Section -->
 
-  </main><!-- End #main -->
+      <!-- ── RIGHT: Project info ── -->
+      <div class="lg:col-span-4 space-y-5">
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Omar Meneses</span></strong>
+        <!-- Project info card -->
+        <div class="card-hover border border-white/8 rounded-xl bg-surface/30 overflow-hidden reveal">
+          <!-- Card header -->
+          <div class="px-6 py-4 border-b border-white/5 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center">
+              <i class="bi bi-info-circle text-accent text-xs"></i>
+            </div>
+            <h3 class="font-display font-bold text-white">Información del Proyecto</h3>
+          </div>
+
+          <!-- Info rows -->
+          <div class="divide-y divide-white/5">
+            <div class="info-row px-6 py-4 flex items-start gap-4">
+              <i class="bi bi-tag text-accent text-sm mt-0.5 flex-shrink-0"></i>
+              <div>
+                <p class="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">Categoría</p>
+                <p class="font-display font-semibold text-white text-sm">El inicio de mi StarUp</p>
+              </div>
+            </div>
+            <div class="info-row px-6 py-4 flex items-start gap-4">
+              <i class="bi bi-building text-accent text-sm mt-0.5 flex-shrink-0"></i>
+              <div>
+                <p class="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">Cliente</p>
+                <p class="font-display font-semibold text-white text-sm">NovaSoft S.A.S</p>
+              </div>
+            </div>
+            <div class="info-row px-6 py-4 flex items-start gap-4">
+              <i class="bi bi-calendar3 text-accent text-sm mt-0.5 flex-shrink-0"></i>
+              <div>
+                <p class="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">Fecha de Creación</p>
+                <p class="font-display font-semibold text-white text-sm">01 Marzo, 2025</p>
+              </div>
+            </div>
+            <div class="info-row px-6 py-4 flex items-start gap-4">
+              <i class="bi bi-link-45deg text-accent text-sm mt-0.5 flex-shrink-0"></i>
+              <div>
+                <p class="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-0.5">URL del Proyecto</p>
+                <a href="https://photographyytravels.rf.gd/" target="_blank"
+                   class="font-mono text-xs text-accent hover:text-sky-300 transition-colors break-all">
+                  photographyytravels.rf.gd
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tags card -->
+        <div class="card-hover border border-white/8 rounded-xl p-6 bg-surface/30 reveal" style="transition-delay:.1s">
+          <p class="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-4">Tecnologías</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">PHP</span>
+            <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">MySQL</span>
+            <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">HTML</span>
+            <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">CSS</span>
+            <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">Bootstrap</span>
+            <span class="px-3 py-1 rounded-full border border-white/10 font-mono text-xs text-slate-400">JavaScript</span>
+            <span class="px-3 py-1 rounded-full border border-accent/20 font-mono text-xs text-accent">StarUp</span>
+          </div>
+        </div>
+
+        <!-- CTA card -->
+        <div class="border border-accent/20 rounded-xl p-6 bg-accent/5 glow-border reveal" style="transition-delay:.2s">
+          <p class="font-mono text-[10px] text-slate-500 uppercase tracking-widest mb-3">¿Te interesa algo similar?</p>
+          <p class="font-body text-slate-400 text-sm mb-5 leading-relaxed">Si quieres un proyecto como este, podemos construirlo juntos. Escríbeme.</p>
+          <a href="index.html#contact"
+             class="w-full flex items-center justify-center gap-2 py-3 bg-accent text-bg font-display font-bold text-sm tracking-widest uppercase rounded hover:bg-sky-400 transition-all glow-accent">
+            <i class="bi bi-envelope-fill text-xs"></i> Contactar
+          </a>
+        </div>
+
+        <!-- Navigation between projects -->
+        <div class="border border-white/8 rounded-xl overflow-hidden reveal" style="transition-delay:.3s">
+          <p class="font-mono text-[10px] text-slate-500 uppercase tracking-widest px-5 py-3 border-b border-white/5">Más proyectos</p>
+          <a href="index.html#portfolio" class="flex items-center justify-between px-5 py-4 hover:bg-white/5 transition-colors group">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-surface border border-white/8 flex items-center justify-center">
+                <i class="bi bi-grid-3x3-gap text-slate-400 text-xs"></i>
+              </div>
+              <span class="font-display font-semibold text-white text-sm">Ver todos</span>
+            </div>
+            <i class="bi bi-arrow-right text-slate-500 group-hover:text-accent transition-colors text-sm"></i>
+          </a>
+          <a href="https://dolphintele.com/" target="_blank" class="flex items-center justify-between px-5 py-4 border-t border-white/5 hover:bg-white/5 transition-colors group">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-lg bg-surface border border-white/8 flex items-center justify-center">
+                <i class="bi bi-telephone-fill text-slate-400 text-xs"></i>
+              </div>
+              <div>
+                <p class="font-display font-semibold text-white text-sm">Dolphin Tele</p>
+                <p class="font-mono text-[10px] text-slate-500">App</p>
+              </div>
+            </div>
+            <i class="bi bi-arrow-up-right text-slate-500 group-hover:text-accent transition-colors text-sm"></i>
+          </a>
+        </div>
+
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </main>
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <!-- ===== LIGHTBOX ===== -->
+  <div id="lightbox" onclick="closeLight()">
+    <div class="relative max-w-5xl w-full mx-4" onclick="event.stopPropagation()">
+      <button onclick="closeLight()" class="absolute -top-10 right-0 font-mono text-xs text-slate-400 hover:text-accent transition-colors flex items-center gap-2">
+        <i class="bi bi-x-lg"></i> Cerrar
+      </button>
+      <img id="lightbox-img" src="" alt="" class="w-full rounded-xl border border-white/10">
+      <div class="flex items-center justify-between mt-4">
+        <button onclick="lightPrev()" class="font-mono text-xs text-slate-400 hover:text-accent transition-colors flex items-center gap-2">
+          <i class="bi bi-chevron-left"></i> Anterior
+        </button>
+        <span id="lightbox-counter" class="font-mono text-xs text-slate-500">1 / 3</span>
+        <button onclick="lightNext()" class="font-mono text-xs text-slate-400 hover:text-accent transition-colors flex items-center gap-2">
+          Siguiente <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-8 border-t border-white/5 mt-8">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="font-display font-bold text-white">OM<span class="text-accent">.</span></span>
+      <p class="font-mono text-xs text-slate-600">© Omar Meneses <span id="year"></span> · Bogotá, Colombia</p>
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/in/omar-fernando-meneses-daza/" target="_blank" class="text-slate-600 hover:text-accent transition-colors text-lg"><i class="bx bxl-linkedin"></i></a>
+        <a href="https://github.com/fernandomeneses99" target="_blank" class="text-slate-600 hover:text-accent transition-colors text-lg"><i class="bx bxl-github"></i></a>
+        <a href="https://wa.me/573133677048" target="_blank" class="text-slate-600 hover:text-accent transition-colors text-lg"><i class="bx bxl-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <!-- Back to top -->
+  <a href="#" id="btt"
+     class="fixed bottom-6 right-6 w-10 h-10 rounded-full bg-accent text-bg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 glow-accent z-50">
+    <i class="bi bi-arrow-up text-sm font-bold"></i>
+  </a>
 
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    /* ─ Navbar ─ */
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', scrollY > 50);
+      const b = document.getElementById('btt');
+      b.style.opacity = scrollY > 300 ? '1' : '0';
+      b.style.pointerEvents = scrollY > 300 ? 'auto' : 'none';
+    });
+
+    /* ─ Mobile nav ─ */
+    function toggleMenu() {
+      const nav = document.getElementById('mobile-nav');
+      const ic  = document.getElementById('menu-icon');
+      nav.classList.toggle('open');
+      ic.className = nav.classList.contains('open') ? 'bi bi-x-lg' : 'bi bi-list';
+    }
+
+    /* ─ Year ─ */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ─ Reveal ─ */
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    /* ─ Slider ─ */
+    const imgs  = ['assets/img/portfolio/portfolio-details-1.png',
+                   'assets/img/portfolio/portfolio-details-2.png',
+                   'assets/img/portfolio/portfolio-details-3.png'];
+    let cur = 0;
+
+    function goSlide(n) {
+      // hide current
+      document.getElementById('slide-' + cur).classList.remove('active');
+      document.getElementById('dot-'   + cur).classList.remove('active');
+      document.getElementById('thumb-' + cur).classList.remove('active');
+      // show new
+      cur = (n + imgs.length) % imgs.length;
+      document.getElementById('slide-' + cur).classList.add('active');
+      document.getElementById('dot-'   + cur).classList.add('active');
+      document.getElementById('thumb-' + cur).classList.add('active');
+      // counter
+      document.getElementById('slide-counter').textContent =
+        String(cur + 1).padStart(2, '0') + ' / ' + String(imgs.length).padStart(2, '0');
+    }
+    function nextSlide() { goSlide(cur + 1); }
+    function prevSlide() { goSlide(cur - 1); }
+
+    // Auto-advance every 4s
+    let autoTimer = setInterval(() => nextSlide(), 4000);
+    document.querySelectorAll('.thumb-btn, .dot, button').forEach(b => {
+      b.addEventListener('click', () => { clearInterval(autoTimer); autoTimer = setInterval(() => nextSlide(), 4000); });
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft')  prevSlide();
+      if (e.key === 'Escape')     closeLight();
+    });
+
+    /* ─ Lightbox ─ */
+    let lightCur = 0;
+    function openLight(n) {
+      lightCur = n;
+      document.getElementById('lightbox-img').src = imgs[n];
+      document.getElementById('lightbox-counter').textContent = (n + 1) + ' / ' + imgs.length;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLight() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function lightNext() {
+      lightCur = (lightCur + 1) % imgs.length;
+      document.getElementById('lightbox-img').src = imgs[lightCur];
+      document.getElementById('lightbox-counter').textContent = (lightCur + 1) + ' / ' + imgs.length;
+    }
+    function lightPrev() {
+      lightCur = (lightCur - 1 + imgs.length) % imgs.length;
+      document.getElementById('lightbox-img').src = imgs[lightCur];
+      document.getElementById('lightbox-counter').textContent = (lightCur + 1) + ' / ' + imgs.length;
+    }
+  </script>
 </body>
-
 </html>
